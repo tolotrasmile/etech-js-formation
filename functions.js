@@ -29,10 +29,14 @@ const newList = [
 ]
 
 const newItems = newList.filter(item => !oldList.find(o => o.id === item.id))
-// console.log(newItems)
+console.log('newItems', newItems)
+console.log('{id: 1} === {id: 1}', {id: 1} === {id: 1})
 
-let uniq = oldList.filter((e, i, self) => i === self.lastIndexOf(e))
-// console.log(uniq)
+console.log('index of', oldList.indexOf({id: 1}))
+
+let l = [1, 2, 3, 4, 1, 4]
+let uniq = l.filter((e, i, self) => i === self.indexOf(e))
+console.log('uniq', uniq)
 
 // Reduce
 
