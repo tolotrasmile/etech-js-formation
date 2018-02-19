@@ -24,6 +24,8 @@ console.log('Some', some)
 
 // Combine some and includes
 let data = [['aaa', 'bbb'], ['ccc', 'ddd']]
+
+// Search an element from two dimensional array
 let exists = (array, search) => array.some(row => row.includes(search))
 console.log('exists', exists(data, 'eef'))
 
@@ -38,5 +40,5 @@ const numbers = [
   [1, 2, 3, 4, 5]
 ]
 
-let transpose = numbers[0].map((e, i) => numbers.map(row => row[i]))
+let transpose = numbers[0].map((element, index) => numbers.map(row => row[index]))
 console.log(transpose)
